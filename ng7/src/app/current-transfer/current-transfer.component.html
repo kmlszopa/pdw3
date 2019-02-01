@@ -1,0 +1,10 @@
+<h1>Obecny transfer</h1>
+<h3>{{ user.username }}</h3>
+<div *ngIf="transfer.uploadSpeed > 0; then thenUploadBlock else elseUploadBlock"></div>
+<ng-template #thenUploadBlock>Prędkość wysyłania: {{ transfer.uploadSpeed }} kb/s</ng-template>
+<ng-template #elseUploadBlock>Prędkość wysyłania: 0 kb/s</ng-template>
+<br>
+<div *ngIf="transfer.downloadSpeed > 0; then thenDownloadBlock else elseDownloadBlock"></div>
+<ng-template #thenDownloadBlock>Prędkość pobierania: {{ transfer.downloadSpeed }} kb/s</ng-template>
+<ng-template #elseDownloadBlock>Prędkość pobierania: 0 kb/s</ng-template>
+

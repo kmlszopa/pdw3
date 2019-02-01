@@ -1,0 +1,43 @@
+<h1>Nazwa użytkownika: {{ user.username }}</h1>
+<h3>Nazwa komputera: {{user.computerName}}</h3>
+<h3>Opis: {{user.description}}</h3>
+
+<a routerLink="/edit-details/{{user.id}}">
+  <button class="cta">Edytuj informacje</button>
+</a>
+<div>
+
+  <div id="messages">
+    <a routerLink="/messages/{{user.id}}">
+      <div>
+        <i class="fas fa-font fa-6x"></i>
+        Keylogger
+      </div>
+    </a>
+  </div>
+  <div id="current-transfer">
+    <a routerLink="/current-transfer/{{user.id}}">
+      <div>
+        <i class="fas fa-exchange-alt fa-6x"></i>
+        Obecny transfer
+      </div>
+    </a>
+  </div>
+  <div id="internet-settings">
+    <a routerLink="/internet-settings/{{user.id}}">
+      <div>
+        <i class="fas fa-tools fa-6x"></i>
+        Ustawienia
+      </div>
+    </a>
+  </div>
+  <div id="network-card">
+    <a routerLink="/network-card/{{user.id}}">
+      <div>
+        <i class="fas fa-ethernet fa-6x"></i>
+        Karta sieciowa
+      </div>
+    </a>
+  </div>
+
+

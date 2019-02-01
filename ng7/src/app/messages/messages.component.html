@@ -1,0 +1,12 @@
+<h1>Keylogger</h1>
+<h3>{{user.username}}</h3>
+<div id="keylogger">
+  <div class="message" *ngFor="let messageData of messageDatas ">
+
+    <div class="date">
+      {{messageData.messageTimestamp | date:'dd/mm/yyyy HH:mm:ss'}}: {{messageData.message}}
+    </div>
+
+  </div>
+
+</div>

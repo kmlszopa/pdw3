@@ -1,0 +1,22 @@
+<h1>Dodaj użytkownika</h1>
+
+<form [formGroup]="userForm" ng-submit="submitForm()">
+
+  <label>
+    Nazwa użytkownika:
+    <input name="username" formControlName="username">
+  </label>
+
+  <label>
+    Nazwa komputera:
+    <input name="computerName" type="text" formControlName="computerName">
+  </label>
+
+  <label>
+    Opis:
+    <input name="description" formControlName="description">
+  </label>
+
+  <input type="submit" value="Dodaj użytkownika" class="cta" (click)="onSubmit()">
+
+</form>

@@ -1,0 +1,17 @@
+<h1>Ustawienia internetowe</h1>
+<h3>{{ user.username }}</h3>
+
+<div class="question" *ngIf="!settings.isCurrentTransferMonitored">
+  <p>Czy monitorować obecny transfer:
+    <font color="red">
+      <label> NIE </label> </font>
+    <button class="cta" (click)="change1()">Włącz</button>
+  </p>
+</div>
+<div class="question" *ngIf="settings.isCurrentTransferMonitored">
+  <p>Czy monitorować obecny transfer:
+    <font color="lime">
+      <label>TAK </label> </font>
+    <button class="buttons" (click)="change1()">ZAKOŃCZ</button>
+  </p>
+</div>

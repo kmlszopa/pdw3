@@ -1,0 +1,14 @@
+<h3>Użytkownicy</h3>
+<div>
+  <a style="" routerLink="/add-user/" style="color:black; text-decoration: none; padding-bottom: 10px; font-size: 15px">
+    <button class="add">Dodaj użytkownika</button>
+  </a>
+</div>
+
+<ul *ngIf="users">
+  <li *ngFor="let user of users">
+    <p>
+      <a routerLink="/details/{{user.id}}" style="color:black; text-decoration: none; font-size: 23px">{{ user.username }}</a>
+    </p>
+  </li>
+</ul>

@@ -1,0 +1,22 @@
+<h1>Edytuj użytkownika</h1>
+
+<form [formGroup]="userForm" ng-submit="submitForm()">
+
+  <label>
+    Nazwa użytkownika:
+    <input name="username" formControlName="username" placeholder="{{user.username}}">
+  </label>
+
+  <label>
+    Nazwa komputera:
+    <input name="computerName" type="text" formControlName="computerName" placeholder="{{user.computerName}}">
+  </label>
+
+  <label>
+    Opis:
+    <input name="description" formControlName="description" placeholder="{{user.description}}">
+  </label>
+
+  <input type="submit" value="Edytuj" class="cta" (click)="onSubmit()">
+  <button type="submit" value="Dodaj użytkownika" class="delete" (click)="deleteUser()">Usuń użytkownika</button>
+</form>
